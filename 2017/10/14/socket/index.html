@@ -10,6 +10,18 @@
 
     <!--Description-->
     
+        <meta name="description" content="socket简介又叫套接字，通信的基石，支持TCP／IP协议的网络通信的基本单元，包含网络通信的必须的5种信息：
+
+连接使用的协议
+
+
+本地主机的IP地址
+本地进程的协议端口
+远地主机的IP地址
+远程进程的协议端口
+
+多个TCP连接或多个应用程序进程可能需要同一个TCP协议端口传输数据。为了区别不同">
+    
 
     <!--Author-->
     
@@ -40,7 +52,7 @@
 
     <!-- Title -->
     
-    <title>Archiv: 2017 - 胡斐的博客</title>
+    <title>胡斐的博客</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
@@ -127,9 +139,7 @@
 <div class="container">
 
     <!-- Main Content -->
-    
-
-<div class="row">
+    <div class="row">
     <div class="col-sm-12">
 
         <!--Title and Logo-->
@@ -137,32 +147,70 @@
     <div class="logo">
         <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
         
-            <h1 id="main-title" class="title">2017</h1>
-        
     </div>
 </header>
 
-        <section class="main archive-container">
+        <section class="main">
             
-                <div class="archive-post">
-    <a href="/2017/10/14/hello-world/">
-        <span class="archive-date">
-            Oct 2017
-        </span>
-        Untitled
-    </a>
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2017/10/14/socket/">
+                Untitled
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2017-10-14</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <h1 id="socket"><a href="#socket" class="headerlink" title="socket"></a>socket</h1><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>又叫套接字，通信的基石，支持TCP／IP协议的网络通信的基本单元，包含网络通信的必须的5种信息：</p>
+<ul>
+<li>连接使用的协议</li>
+</ul>
+<ol>
+<li>本地主机的IP地址</li>
+<li>本地进程的协议端口</li>
+<li>远地主机的IP地址</li>
+<li>远程进程的协议端口</li>
+</ol>
+<p>多个TCP连接或多个应用程序进程可能需要同一个TCP协议端口传输数据。<br>为了区别不同的应用程序进程和连接，操作系统为应用程序与<br>TCP／IP协议交互提供了套接字（socket）接口。应用层可以和传输层通过socket接口，区分来自不同应用程序进程或网络连接的通信，实现数据传输的并发服务。</p>
+<p>socket连接至少需要一对套接字，运行于客户端（ClientSocket）和服务端（ServerSocket），连接分3个步骤：</p>
+<ol>
+<li>服务器监听</li>
+<li>客户端请求</li>
+<li>连接确认</li>
+</ol>
+<p>socket支持不同的传输层协议（TCP，UDP），使用TCP协议连接就是一个TCP连接，UDP同理。<br><img src="http://upload-images.jianshu.io/upload_images/1170656-6b9392fad31b711d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="连接原理" title="Optional title"></p>
+<h3 id="socket使用的库函数"><a href="#socket使用的库函数" class="headerlink" title="socket使用的库函数"></a>socket使用的库函数</h3><ol>
+<li><p>创建套接字</p>
+<p><code>Socket(af,type,protocol) //建立地址和套接字的联系</code></p>
+</li>
+</ol>
+
+    </div>
+
+    
+
+    
+
+    <!-- Comments -->
+    
+
 </div>
-            
-                <div class="archive-post">
-    <a href="/2017/10/14/socket/">
-        <span class="archive-date">
-            Oct 2017
-        </span>
-        Untitled
-    </a>
-</div>
-            
         </section>
+
     </div>
 </div>
 
