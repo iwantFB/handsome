@@ -10,6 +10,9 @@
 
     <!--Description-->
     
+        <meta name="description" content="简介postman中POST请求的body中有form-data、x-www-form-urlencoded、raw、binary四种选项，在我用servlet的post请求中设置获取参数的时候使用form-data一直获取不到参数，查询明白，所以记录下。
+1. form-datahttp请求中的m">
+    
 
     <!--Author-->
     
@@ -18,7 +21,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="胡斐的博客"/>
+        <meta property="og:title" content="Postman请求中的各个参数的意思"/>
     
 
     <!--Open Graph Description-->
@@ -29,7 +32,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
     
 
     <!--Page Cover-->
@@ -40,7 +43,7 @@
 
     <!-- Title -->
     
-    <title>Archiv: 2017 - 胡斐的博客</title>
+    <title>Postman请求中的各个参数的意思 - 胡斐的博客</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
@@ -127,9 +130,7 @@
 <div class="container">
 
     <!-- Main Content -->
-    
-
-<div class="row">
+    <div class="row">
     <div class="col-sm-12">
 
         <!--Title and Logo-->
@@ -137,41 +138,53 @@
     <div class="logo">
         <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
         
-            <h1 id="main-title" class="title">2017</h1>
-        
     </div>
 </header>
 
-        <section class="main archive-container">
+        <section class="main">
             
-                <div class="archive-post">
-    <a href="/2017/10/17/Postman的参数类型设置区别/">
-        <span class="archive-date">
-            Oct 2017
-        </span>
-        Postman请求中的各个参数的意思
-    </a>
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2017/10/17/Postman的参数类型设置区别/">
+                Postman请求中的各个参数的意思
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2017-10-17</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>postman中POST请求的body中有form-data、x-www-form-urlencoded、raw、binary四种选项，在我用servlet的post请求中设置获取参数的时候使用form-data一直获取不到参数，查询明白，所以记录下。</p>
+<h3 id="1-form-data"><a href="#1-form-data" class="headerlink" title="1. form-data"></a>1. form-data</h3><p>http请求中的<b>multipart/form-data</b>，会将表单数据处理为一条消息，以标签为单元，用分隔符分开。可以上传键值对或者文件，需要上传文件时需要设置key（键）的后面为file。<br><br>由于有boundry隔离，所以该类型既可以上传文件，也可以上传键值对，并可以上传多个文件。</p>
+<h3 id="2-x-www-form-urlencoded"><a href="#2-x-www-form-urlencoded" class="headerlink" title="2. x-www-form-urlencoded"></a>2. x-www-form-urlencoded</h3><p>等价于application/x-www-form-urlencoded，会将表单数据转为键值对，可以在servlet直接用getParameter获取指定参数。但是只能传text类型的值。</p>
+<h3 id="3-raw"><a href="#3-raw" class="headerlink" title="3. raw"></a>3. raw</h3><p>自由度最高一种方式，在这里可以设置需要传递的参数的类型，比如文件，字符串，json形式，功能最为全面。可设置类型如下:<img src="../src/imgs/1508206277796.jpg" alt="本地图片"></p>
+<h3 id="4-binary"><a href="#4-binary" class="headerlink" title="4. binary"></a>4. binary</h3><p>相当于application／octet-stream，只能上传二进制文件，通常用来上传文件，且一次只能上传一个文件。</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>一般在使用中都是使用form-data，功能基本够用，既可上传文件也可上传文本。但是form-data与x-www.form-urlencoded的区别就是前者可以上传文件，且最后转化成一条消息（推测为JSON，暂未测试），而后者只能上传文本类型。</p>
+
+    </div>
+
+    
+
+    
+
+    <!-- Comments -->
+    
+
 </div>
-            
-                <div class="archive-post">
-    <a href="/2017/10/14/socket/">
-        <span class="archive-date">
-            Oct 2017
-        </span>
-        socket学习
-    </a>
-</div>
-            
-                <div class="archive-post">
-    <a href="/2017/10/14/开端/">
-        <span class="archive-date">
-            Oct 2017
-        </span>
-        HELLO WORLD
-    </a>
-</div>
-            
         </section>
+
     </div>
 </div>
 
