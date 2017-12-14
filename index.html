@@ -243,16 +243,12 @@
 </ol>
 <p>socket支持不同的传输层协议（TCP，UDP），使用TCP协议连接就是一个TCP连接，UDP同理。<br><img src="http://upload-images.jianshu.io/upload_images/1170656-6b9392fad31b711d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="连接原理" title="Optional title"></p>
 <h3 id="socket使用的库函数"><a href="#socket使用的库函数" class="headerlink" title="socket使用的库函数"></a>socket使用的库函数</h3><p>1.&nbsp;创建socket.  </p>
-<pre><code>Socket(af,type,protocol) //建立地址和套接字的联系   
-bind(socketID,local addr, addrlen) //服务器监听客户端请求
-listen( socketID,quenlen) //建立服务器／客户端连接（TCP）
-</code></pre><p>2.&nbsp;客户端请求连接</p>
-<pre><code>Connect(sickid, destaddr, addrlen) //服务器等待从编号为Sockid的Socket上接收客户请求连接
-newsockid=accept(Sockid，Clientaddr, paddrlen)//发送/接收数据
-</code></pre><p>3.&nbsp;&nbsp;面向连接:</p>
-<pre><code>send(sockid, buff, bufflen) 
-recv( )
-</code></pre><p>4.&nbsp;&nbsp;面向无连接:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Socket(af,type,protocol) //建立地址和套接字的联系   </div><div class="line">bind(socketID,local addr, addrlen) //服务器监听客户端请求</div><div class="line">listen( socketID,quenlen) //建立服务器／客户端连接（TCP）</div></pre></td></tr></table></figure>
+<p>2.&nbsp;客户端请求连接</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Connect(sickid, destaddr, addrlen) //服务器等待从编号为Sockid的Socket上接收客户请求连接</div><div class="line">newsockid=accept(Sockid，Clientaddr, paddrlen)//发送/接收数据</div></pre></td></tr></table></figure>
+<p>3.&nbsp;&nbsp;面向连接:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">send(sockid, buff, bufflen) </div><div class="line">recv( )</div></pre></td></tr></table></figure>
+<p>4.&nbsp;&nbsp;面向无连接:</p>
 <pre><code>sendto(sockid,buff,…,addrlen) //发送数据
 recvfrom( )//收到响应
 </code></pre><p>5.&nbsp;&nbsp;释放套接字，关闭资源:</p>
