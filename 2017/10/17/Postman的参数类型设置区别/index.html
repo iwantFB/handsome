@@ -10,8 +10,8 @@
 
     <!--Description-->
     
-        <meta name="description" content="简介postman中POST请求的body中有form-data、x-www-form-urlencoded、raw、binary四种选项，在我用servlet的post请求中设置获取参数的时候使用form-data一直获取不到参数，查询明白，所以记录下。
-1. form-datahttp请求中的m">
+        <meta name="description" content="简介postman中POST请求的body中有form-data、x-www-form-urlencoded、raw、binary四种选项，其对应HTML的enctype 属性,规定在发送到服务器之前应该如何对表单数据进行编码。表单数据提交。
+1. form-datahttp请求中的multipar">
     
 
     <!--Author-->
@@ -166,7 +166,7 @@
         
 
         <!-- Post Content -->
-        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>postman中POST请求的body中有form-data、x-www-form-urlencoded、raw、binary四种选项，在我用servlet的post请求中设置获取参数的时候使用form-data一直获取不到参数，查询明白，所以记录下。</p>
+        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>postman中POST请求的body中有form-data、x-www-form-urlencoded、raw、binary四种选项，其对应HTML的enctype 属性,规定在发送到服务器之前应该如何对表单数据进行编码。<br>表单数据提交。<br><img src="../src/imgs/formData.png" alt="本地图片"></p>
 <h3 id="1-form-data"><a href="#1-form-data" class="headerlink" title="1. form-data"></a>1. form-data</h3><p>http请求中的<b>multipart/form-data</b>，会将表单数据处理为一条消息，以标签为单元，用分隔符分开。可以上传键值对或者文件，需要上传文件时需要设置key（键）的后面为file。<br><br>由于有boundry隔离，所以该类型既可以上传文件，也可以上传键值对，并可以上传多个文件。</p>
 <h3 id="2-x-www-form-urlencoded"><a href="#2-x-www-form-urlencoded" class="headerlink" title="2. x-www-form-urlencoded"></a>2. x-www-form-urlencoded</h3><p>等价于application/x-www-form-urlencoded，会将表单数据转为键值对，可以在servlet直接用getParameter获取指定参数。但是只能传text类型的值。</p>
 <h3 id="3-raw"><a href="#3-raw" class="headerlink" title="3. raw"></a>3. raw</h3><p>自由度最高一种方式，在这里可以设置需要传递的参数的类型，比如文件，字符串，json形式，功能最为全面。可设置类型如下:<img src="../src/imgs/1508206277796.jpg" alt="本地图片"></p>
@@ -177,6 +177,11 @@
 
     
 
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/网络/">#网络</a>
+        </div>
     
 
     <!-- Comments -->
