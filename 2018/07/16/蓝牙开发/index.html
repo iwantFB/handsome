@@ -3,27 +3,25 @@
 <head>
   <meta charset="utf-8">
   
-  <title>socket学习 | 胡斐的博客</title>
+  <title>蓝牙开发 | 胡斐的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="keywords" content="杂项" />
+  <meta name="keywords" content="开发记录" />
   
   
   
   
-  <meta name="description" content="socket简介又叫套接字，通信的基石，它是对TCP/IP协议的封装，本身并不是协议，而是一个调用接口（API），通过Socket，我们才能使用TCP/IP协议，socket支持TCP／IP协议的网络通信的基本单元，包含网络通信的必须的5种信息：  连接使用的协议 本地主机的IP地址 本地进程的协议端口 远地主机的IP地址 远程进程的协议端口  多个TCP连接或多个应用程序进程可能需要同一个TCP">
-<meta name="keywords" content="杂项">
+  <meta name="description" content="蓝牙开发Q1: CoreBluetooth[API MISUSE]  can only accept commands while in the powered on state  A: 这个时候蓝牙还是没有准备好的，可以在centralManagerDidUpdateState 中去开始，或者等状态为CBManagerStatePoweredOn的时候开始">
+<meta name="keywords" content="开发记录">
 <meta property="og:type" content="article">
-<meta property="og:title" content="socket学习">
-<meta property="og:url" content="http://yoursite.com/2017/10/14/socket/index.html">
+<meta property="og:title" content="蓝牙开发">
+<meta property="og:url" content="http://yoursite.com/2018/07/16/蓝牙开发/index.html">
 <meta property="og:site_name" content="胡斐的博客">
-<meta property="og:description" content="socket简介又叫套接字，通信的基石，它是对TCP/IP协议的封装，本身并不是协议，而是一个调用接口（API），通过Socket，我们才能使用TCP/IP协议，socket支持TCP／IP协议的网络通信的基本单元，包含网络通信的必须的5种信息：  连接使用的协议 本地主机的IP地址 本地进程的协议端口 远地主机的IP地址 远程进程的协议端口  多个TCP连接或多个应用程序进程可能需要同一个TCP">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1170656-6b9392fad31b711d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-12-14T09:03:29.727Z">
+<meta property="og:description" content="蓝牙开发Q1: CoreBluetooth[API MISUSE]  can only accept commands while in the powered on state  A: 这个时候蓝牙还是没有准备好的，可以在centralManagerDidUpdateState 中去开始，或者等状态为CBManagerStatePoweredOn的时候开始">
+<meta property="og:updated_time" content="2018-07-16T15:07:26.230Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="socket学习">
-<meta name="twitter:description" content="socket简介又叫套接字，通信的基石，它是对TCP/IP协议的封装，本身并不是协议，而是一个调用接口（API），通过Socket，我们才能使用TCP/IP协议，socket支持TCP／IP协议的网络通信的基本单元，包含网络通信的必须的5种信息：  连接使用的协议 本地主机的IP地址 本地进程的协议端口 远地主机的IP地址 远程进程的协议端口  多个TCP连接或多个应用程序进程可能需要同一个TCP">
-<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/1170656-6b9392fad31b711d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:title" content="蓝牙开发">
+<meta name="twitter:description" content="蓝牙开发Q1: CoreBluetooth[API MISUSE]  can only accept commands while in the powered on state  A: 这个时候蓝牙还是没有准备好的，可以在centralManagerDidUpdateState 中去开始，或者等状态为CBManagerStatePoweredOn的时候开始">
   
     <link rel="alternate" href="/atom.xml" title="胡斐的博客" type="application/atom+xml">
   
@@ -106,7 +104,7 @@
             
       <div id="content" class="outer">
         
-          <section id="main" style="float:none;"><article id="post-socket" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+          <section id="main" style="float:none;"><article id="post-蓝牙开发" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
     
@@ -114,7 +112,7 @@
         
   
     <h1 class="thumb" class="article-title" itemprop="name">
-      socket学习
+      蓝牙开发
     </h1>
   
 
@@ -122,8 +120,8 @@
     
     <div class="article-meta">
       
-	<a href="/2017/10/14/socket/" class="article-date">
-	  <time datetime="2017-10-14T10:54:27.000Z" itemprop="datePublished">October 14, 2017</time>
+	<a href="/2018/07/16/蓝牙开发/" class="article-date">
+	  <time datetime="2018-07-16T15:06:39.164Z" itemprop="datePublished">July 16, 2018</time>
 	</a>
 
        
@@ -135,34 +133,8 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="socket"><a href="#socket" class="headerlink" title="socket"></a>socket</h1><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>又叫套接字，通信的基石，它是对TCP/IP协议的封装，本身并不是协议，而是一个调用接口（API），通过Socket，我们才能使用TCP/IP协议，socket支持TCP／IP协议的网络通信的基本单元，包含网络通信的必须的5种信息：</p>
-<ol>
-<li>连接使用的协议</li>
-<li>本地主机的IP地址</li>
-<li>本地进程的协议端口</li>
-<li>远地主机的IP地址</li>
-<li>远程进程的协议端口</li>
-</ol>
-<p>多个TCP连接或多个应用程序进程可能需要同一个TCP协议端口传输数据。<br>为了区别不同的应用程序进程和连接，操作系统为应用程序与<br>TCP／IP协议交互提供了套接字（socket）接口。应用层可以和传输层通过socket接口，区分来自不同应用程序进程或网络连接的通信，实现数据传输的并发服务。</p>
-<p>socket连接至少需要一对套接字，运行于客户端（ClientSocket）和服务端（ServerSocket），连接分3个步骤：</p>
-<ol>
-<li>服务器监听</li>
-<li>客户端请求</li>
-<li>连接确认</li>
-</ol>
-<p>socket支持不同的传输层协议（TCP，UDP），使用TCP协议连接就是一个TCP连接，UDP同理。<br><img src="http://upload-images.jianshu.io/upload_images/1170656-6b9392fad31b711d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="连接原理" title="Optional title"></p>
-<h3 id="socket使用的库函数"><a href="#socket使用的库函数" class="headerlink" title="socket使用的库函数"></a>socket使用的库函数</h3><p>1.&nbsp;创建socket.  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Socket(af,type,protocol) //建立地址和套接字的联系   </div><div class="line">bind(socketID,local addr, addrlen) //服务器监听客户端请求</div><div class="line">listen( socketID,quenlen) //建立服务器／客户端连接（TCP）</div></pre></td></tr></table></figure>
-<p>2.&nbsp;客户端请求连接</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Connect(sickid, destaddr, addrlen) //服务器等待从编号为Sockid的Socket上接收客户请求连接</div><div class="line">newsockid=accept(Sockid，Clientaddr, paddrlen)//发送/接收数据</div></pre></td></tr></table></figure>
-<p>3.&nbsp;&nbsp;面向连接:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">send(sockid, buff, bufflen) </div><div class="line">recv( )</div></pre></td></tr></table></figure>
-<p>4.&nbsp;&nbsp;面向无连接:</p>
-<pre><code>sendto(sockid,buff,…,addrlen) //发送数据
-recvfrom( )//收到响应
-</code></pre><p>5.&nbsp;&nbsp;释放套接字，关闭资源:</p>
-<pre><code>close(socked)//关闭socket
-</code></pre><h3 id="iOS中socket开发"><a href="#iOS中socket开发" class="headerlink" title="iOS中socket开发"></a>iOS中socket开发</h3><p>当然开发中肯定不会直接使用这些（当然大牛除外），我们都是站在巨人的肩膀上编程，所以在开发中我们使用<a href="https://github.com/robbiehanson/CocoaAsyncSocket" target="_blank" rel="external"><b>CocoaAsyncSocket</b></a>。具体使用可以参考GitHub上的usage。</p>
+        <h3 id="蓝牙开发"><a href="#蓝牙开发" class="headerlink" title="蓝牙开发"></a>蓝牙开发</h3><p>Q1: CoreBluetooth[API MISUSE]  can only accept commands while in the powered on state</p>
+<p> A: 这个时候蓝牙还是没有准备好的，可以在centralManagerDidUpdateState 中去开始，或者等状态为CBManagerStatePoweredOn的时候开始</p>
 
       
     </div>
@@ -170,7 +142,7 @@ recvfrom( )//收到响应
       
       
   <span class="ico-tags"></span>
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/杂项/">杂项</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/开发记录/">开发记录</a></li></ul>
 
       
         
@@ -205,19 +177,10 @@ recvfrom( )//收到响应
     
 <nav id="article-nav">
   
-    <a href="/2017/10/17/Postman的参数类型设置区别/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Postman请求中的各个参数的意思
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/10/14/开端/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2018/06/09/iOS xib和代码颜色差异/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">HELLO WORLD</div>
+      <div class="article-nav-title">xib和代码颜色差异</div>
     </a>
   
 </nav>
@@ -231,7 +194,7 @@ recvfrom( )//收到响应
     <div id="toc" class="toc-article">
     <strong class="toc-title">Contents</strong>
     
-      <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#socket"><span class="nav-number">1.</span> <span class="nav-text">socket</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简介"><span class="nav-number">1.0.1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#socket使用的库函数"><span class="nav-number">1.0.2.</span> <span class="nav-text">socket使用的库函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#iOS中socket开发"><span class="nav-number">1.0.3.</span> <span class="nav-text">iOS中socket开发</span></a></li></ol></li></ol></li></ol>
+      <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#蓝牙开发"><span class="nav-number">1.</span> <span class="nav-text">蓝牙开发</span></a></li></ol>
     
     </div>
   </aside>
