@@ -3,29 +3,25 @@
 <head>
   <meta charset="utf-8">
   
-  <title>xib和代码颜色差异 | 胡斐的博客</title>
+  <title>动态规划学习笔记 | 胡斐的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="keywords" content="ios tips" />
+  <meta name="keywords" content="算法 笔记 动态规划" />
   
   
   
   
-  <meta name="description" content="iOS开发中代码和xib布局总是混着用，我的代码设置颜色用的宏为 #define UIColorFromRGBA(rgbValue, alphaValue) [UIColor \ colorWithRed:((float)((rgbValue &amp;amp; 0xFF0000) &amp;gt;&amp;gt; 16))/255.0 \ green:((float)((rgbValue &amp;amp; 0x00FF00)">
-<meta name="keywords" content="ios tips">
+  <meta name="description" content="#动态规划 DAY1可解决哪些问题  求和问题: kSum问题 最值问题: 最大值最小值 存在性问题: 取石子游戏  动态规划解决思路的四个部分  确定状态: 确定F(x)代表的是什么意思,如确定最后一步，然后分解子问题  转移方程: 描述函数关系，即F(1) 和 F(2) 的关系 初始条件和边界情况: 确定函数的终止条件，让函数有一个确定的值 计算顺序: 从小到大？从前往后？">
+<meta name="keywords" content="算法 笔记 动态规划">
 <meta property="og:type" content="article">
-<meta property="og:title" content="xib和代码颜色差异">
-<meta property="og:url" content="http://yoursite.com/2018/06/09/iOS xib和代码颜色差异/index.html">
+<meta property="og:title" content="动态规划学习笔记">
+<meta property="og:url" content="http://yoursite.com/2020/07/18/动态规划学习笔记/index.html">
 <meta property="og:site_name" content="胡斐的博客">
-<meta property="og:description" content="iOS开发中代码和xib布局总是混着用，我的代码设置颜色用的宏为 #define UIColorFromRGBA(rgbValue, alphaValue) [UIColor \ colorWithRed:((float)((rgbValue &amp;amp; 0xFF0000) &amp;gt;&amp;gt; 16))/255.0 \ green:((float)((rgbValue &amp;amp; 0x00FF00)">
-<meta property="og:image" content="http://yoursite.com/2018/06/09/src/imgs/colorDemo1.png">
-<meta property="og:image" content="http://yoursite.com/2018/06/09/src/imgs/颜色设置.png">
-<meta property="og:image" content="http://yoursite.com/2018/06/09/src/imgs/colorDemo2.png">
-<meta property="og:updated_time" content="2018-06-09T07:11:58.105Z">
+<meta property="og:description" content="#动态规划 DAY1可解决哪些问题  求和问题: kSum问题 最值问题: 最大值最小值 存在性问题: 取石子游戏  动态规划解决思路的四个部分  确定状态: 确定F(x)代表的是什么意思,如确定最后一步，然后分解子问题  转移方程: 描述函数关系，即F(1) 和 F(2) 的关系 初始条件和边界情况: 确定函数的终止条件，让函数有一个确定的值 计算顺序: 从小到大？从前往后？">
+<meta property="og:updated_time" content="2020-07-18T10:30:51.902Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="xib和代码颜色差异">
-<meta name="twitter:description" content="iOS开发中代码和xib布局总是混着用，我的代码设置颜色用的宏为 #define UIColorFromRGBA(rgbValue, alphaValue) [UIColor \ colorWithRed:((float)((rgbValue &amp;amp; 0xFF0000) &amp;gt;&amp;gt; 16))/255.0 \ green:((float)((rgbValue &amp;amp; 0x00FF00)">
-<meta name="twitter:image" content="http://yoursite.com/2018/06/09/src/imgs/colorDemo1.png">
+<meta name="twitter:title" content="动态规划学习笔记">
+<meta name="twitter:description" content="#动态规划 DAY1可解决哪些问题  求和问题: kSum问题 最值问题: 最大值最小值 存在性问题: 取石子游戏  动态规划解决思路的四个部分  确定状态: 确定F(x)代表的是什么意思,如确定最后一步，然后分解子问题  转移方程: 描述函数关系，即F(1) 和 F(2) 的关系 初始条件和边界情况: 确定函数的终止条件，让函数有一个确定的值 计算顺序: 从小到大？从前往后？">
   
     <link rel="alternate" href="/atom.xml" title="胡斐的博客" type="application/atom+xml">
   
@@ -108,7 +104,7 @@
             
       <div id="content" class="outer">
         
-          <section id="main" style="float:none;"><article id="post-iOS xib和代码颜色差异" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+          <section id="main" style="float:none;"><article id="post-动态规划学习笔记" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
     
@@ -116,7 +112,7 @@
         
   
     <h1 class="thumb" class="article-title" itemprop="name">
-      xib和代码颜色差异
+      动态规划学习笔记
     </h1>
   
 
@@ -124,8 +120,8 @@
     
     <div class="article-meta">
       
-	<a href="/2018/06/09/iOS xib和代码颜色差异/" class="article-date">
-	  <time datetime="2018-06-09T07:02:56.776Z" itemprop="datePublished">June 9, 2018</time>
+	<a href="/2020/07/18/动态规划学习笔记/" class="article-date">
+	  <time datetime="2020-07-17T16:00:00.000Z" itemprop="datePublished">July 18, 2020</time>
 	</a>
 
        
@@ -137,16 +133,20 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>iOS开发中代码和xib布局总是混着用，我的代码设置颜色用的宏为</p>
-<pre><code>#define UIColorFromRGBA(rgbValue, alphaValue) [UIColor \
-colorWithRed:((float)((rgbValue &amp; 0xFF0000) &gt;&gt; 16))/255.0 \
-green:((float)((rgbValue &amp; 0x00FF00) &gt;&gt; 8))/255.0 \
-blue:((float)(rgbValue &amp; 0x0000FF))/255.0 \
-alpha:alphaValue]
-</code></pre><p>那么在对于同一种颜色设置的问题上就会产生一个奇怪的问题。<br><img src="../src/imgs/colorDemo1.png" width="200px" height="600px"><br>在<a href="https://stackoverflow.com/questions/10039641/ios-color-on-xcode-simulator-is-different-from-the-color-on-device#new-answer" target="_blank" rel="external">stackoverflow</a>上的回答是这样的，对于代码的设置和xib的设置使用的不是一种颜色空间，关于颜色空间的区别可以看下<a href="https://www.zhihu.com/question/20602284" target="_blank" rel="external">这个</a>.</p>
-<h3 id="how-to-fix"><a href="#how-to-fix" class="headerlink" title="how to fix"></a>how to fix</h3><p>改变xib颜色设置的颜色空间，如下<br><img src="../src/imgs/颜色设置.png" alt=""></p>
-<p>设置完成后效果如下</p>
-<p><img src="../src/imgs/colorDemo2.png" width="200px" height="500px"></p>
+        <p>#动态规划</p>
+<h2 id="DAY1"><a href="#DAY1" class="headerlink" title="DAY1"></a>DAY1</h2><p>可解决哪些问题</p>
+<ul>
+<li>求和问题: kSum问题</li>
+<li>最值问题: 最大值最小值</li>
+<li>存在性问题: 取石子游戏</li>
+</ul>
+<p>动态规划解决思路的四个部分</p>
+<ol>
+<li>确定状态: 确定F(x)代表的是什么意思,如确定最后一步，然后分解子问题 </li>
+<li>转移方程: 描述函数关系，即F(1) 和 F(2) 的关系</li>
+<li>初始条件和边界情况: 确定函数的终止条件，让函数有一个确定的值</li>
+<li>计算顺序: 从小到大？从前往后？</li>
+</ol>
 
       
     </div>
@@ -154,7 +154,7 @@ alpha:alphaValue]
       
       
   <span class="ico-tags"></span>
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios-tips/">ios tips</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法-笔记-动态规划/">算法 笔记 动态规划</a></li></ul>
 
       
         
@@ -189,19 +189,10 @@ alpha:alphaValue]
     
 <nav id="article-nav">
   
-    <a href="/2018/07/16/蓝牙开发/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Neuer</strong>
-      <div class="article-nav-title">
-        
-          蓝牙开发
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/05/06/CALayer学习/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2018/07/16/蓝牙开发/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Älter</strong>
-      <div class="article-nav-title">CALayer相关笔记</div>
+      <div class="article-nav-title">蓝牙开发</div>
     </a>
   
 </nav>
@@ -215,7 +206,7 @@ alpha:alphaValue]
     <div id="toc" class="toc-article">
     <strong class="toc-title">Contents</strong>
     
-      <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#how-to-fix"><span class="nav-number">1.</span> <span class="nav-text">how to fix</span></a></li></ol>
+      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#DAY1"><span class="nav-number">1.</span> <span class="nav-text">DAY1</span></a></li></ol>
     
     </div>
   </aside>
